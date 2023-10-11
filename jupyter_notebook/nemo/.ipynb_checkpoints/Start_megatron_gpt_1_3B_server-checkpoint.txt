@@ -1,0 +1,5 @@
+cd /workspace
+git clone https://github.com/NVIDIA/NeMo.git 
+git checkout v1.17.0
+cd NeMo/examples/nlp/language_modeling
+python megatron_gpt_eval.py gpt_model_file=/workspace/source_code/nemo_gpt1.3B_fp16.nemo server=True tensor_model_parallel_size=1 trainer.devices=1
